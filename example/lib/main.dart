@@ -22,7 +22,9 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.red,
         colorScheme: ColorScheme.dark(secondary: Colors.red),
         // accentColor: Colors.red,
-        toggleableActiveColor: Colors.red,
+        toggleButtonsTheme: ToggleButtonsThemeData(
+          selectedColor: Colors.red,
+        ),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       mode: ThemeMode.system,

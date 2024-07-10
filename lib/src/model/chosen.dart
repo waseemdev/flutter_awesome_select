@@ -9,7 +9,7 @@ typedef S2MultiSelectedResolver<T> = Future<List<S2Choice<T>>?> Function(
     List<T>? value);
 
 /// Chosen data class
-abstract class S2ChosenData<T> {
+mixin S2ChosenData<T> {
   /// Returns the choice item(s)
   get choice;
 
@@ -181,7 +181,7 @@ mixin S2MultiChosenData<T> on S2ChosenData<T> {
   }
 }
 
-class S2SingleChosen<T> extends S2ChosenData<T> with S2SingleChosenData<T> {
+class S2SingleChosen<T> with S2ChosenData<T>, S2SingleChosenData<T> {
   /// Default constructor
   S2SingleChosen(S2Choice<T>? choice) : _choice = choice;
 
@@ -194,7 +194,7 @@ class S2SingleChosen<T> extends S2ChosenData<T> with S2SingleChosenData<T> {
   }
 }
 
-class S2MultiChosen<T> extends S2ChosenData<T> with S2MultiChosenData<T> {
+class S2MultiChosen<T> with S2ChosenData<T>, S2MultiChosenData<T> {
   /// Default constructor
   S2MultiChosen(List<S2Choice<T>>? choice) : _choice = choice;
 

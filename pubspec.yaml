@@ -4,7 +4,7 @@ homepage: https://github.com/artflutter/flutter_awesome_select
 version: 6.5.0-beta
 
 environment:
-  sdk: '>=2.17.0 <3.0.0'
+  sdk: '>=3.0.0 <4.0.0'
   flutter: ">=3.0.0"
 
 dependencies:
